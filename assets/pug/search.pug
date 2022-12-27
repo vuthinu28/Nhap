@@ -1,0 +1,19 @@
+
+extends layout/layout2
+include blocks/mixins
+block vars
+    -title = 'Tìm Kiếm - VLUXURY '
+    -bodyClass = 'home-page'
+    -linkCss='assets/css/categoryProduct.css'
+    -linkScripts='assets/javascript/search.js'
+block breadcrumbs
+    +breadcrumbs('KẾT QUẢ TÌM KIẾM',' Kết quả tìm kiếm')
+block content
+    .container 
+        .collections__header(style="justify-content:center")
+            h2(style="font-size:26px")
+        .collection__content 
+            ul.row#category-products-list
+        template#category_product-item
+            +category-products__item('assets/image/image_home/bst_moi1.png','ÁO VEST GHI KẺ LH69','2,950,000₫')
+        
